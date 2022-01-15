@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="game.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic, Tac, Toe</title>
+    <script src="game.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Tic, Tac, Toe Game!</h1>
+    </header>
+
+    <main>
+        <aside>
+            <h2>Enter Your Name</h2>
+            <div>
+                <label for="playername">Player Name</label>
+                <input type="text" name="playername" id="playername">
+            </div>
+            <div>
+                <button type="button">Cancel</button>
+                <button type="submit">Confirm</button>
+            </div>
+        </aside>
+    <section id="players">
+        <article>
+            <h2>Player 1</h2>
+            <p>X</p>
+            <h3>Player Name</h3>
+            <button>Enter Your Name</button>
+        </article>
+
+        <article>
+            <h2>Player 2</h2>
+            <p>O</p>
+            <h3>Player Name</h3>
+            <button>Enter Your Name</button>
+        </article>
+        <button>Start The Game</button>
+    </section>
+
+    <section id="game">
+        <article>
+            <h3>You Won <span id="winner-name">Player Name</span>!</h3>
+            <p>Click "Start New Game"</p>
+        </article>
+
+        <p>It's Your Turn <span id="current-playername">CURRENT PLAYER NAME</span>!</p>
+        <ol>
+            <li></li>
+            <li></li>
+            <li></li>
+
+            <li></li>
+            <li></li>
+            <li></li>
+
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </section>
+    </main>
+</body>
+</html>
