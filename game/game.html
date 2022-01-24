@@ -2,13 +2,21 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="overlays.css">
+    <link rel="stylesheet" href="configuration.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic, Tac, Toe</title>
+    <script src="configuration.js" defer></script>
+    <script src="elements.js" defer></script>
     <script src="game.js" defer></script>
 </head>
 <body>
+    <div id="backdrop"></div>
     <header>
         <h1>Tic, Tac, Toe Game!</h1>
     </header>
@@ -18,28 +26,33 @@
             <h2>Enter Your Name</h2>
             <div>
                 <label for="playername">Player Name</label>
-                <input type="text" name="playername" id="playername">
+                <input type="text" name="playername" id="playername" maxlength="30">
             </div>
             <div>
-                <button type="button">Cancel</button>
-                <button type="submit">Confirm</button>
+                <button type="button" id="cancel-button">Cancel</button>
+                <button type="submit" id="confirm-button">Confirm</button>
             </div>
         </aside>
     <section id="players">
-        <article>
-            <h2>Player 1</h2>
-            <p>X</p>
-            <h3>Player Name</h3>
-            <button>Enter Your Name</button>
-        </article>
-
-        <article>
-            <h2>Player 2</h2>
-            <p>O</p>
-            <h3>Player Name</h3>
-            <button>Enter Your Name</button>
-        </article>
-        <button>Start The Game</button>
+        <ol>
+            <li>
+                <article>
+                <h2>Player 1</h2>
+                <p class="player-symbol">X</p>
+                <h3>Player Name</h3>
+                <button id="enter-name-pl1">Enter Your Name</button>
+                </article>
+            </li>
+            <li>
+                <article>
+                <h2>Player 2</h2>
+                <p class="player-symbol">O</p>
+                <h3>Player Name</h3>
+                <button id="enter-name-pl2">Enter Your Name</button>
+                </article>
+            </li>
+        </ol>
+        <button id="game-button">Start The Game</button>
     </section>
 
     <section id="game">
@@ -49,7 +62,7 @@
         </article>
 
         <p>It's Your Turn <span id="current-playername">CURRENT PLAYER NAME</span>!</p>
-        <ol>
+        <ol id="gameboard">
             <li></li>
             <li></li>
             <li></li>
